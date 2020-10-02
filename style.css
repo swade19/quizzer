@@ -66,10 +66,24 @@ body {
     text-align: center;
   }
 
-  .buttons {
+  .buttonsbox {
     display: inline-block;
     background-color: aqua;
-    width: 200px;
-    height: 200px;
+    width: 1200px;
+    height: 700px;
+  }
+
+  .button {
+  width: 500px;
+  height: 200px;
+  }
+
+  .quiztitle {
+    font-size: 35px;
+
+  }
+
+  .question {
+    font-size: 30px;
 
   }
