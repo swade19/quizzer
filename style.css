@@ -6,8 +6,9 @@
 
 }
 
-body { 
+.body { 
     align-content: center;
+    text-align: center;
 }
  /* Style The Dropdown Button */
  .dropbtn {
@@ -71,6 +72,8 @@ body {
     background-color: aqua;
     width: 1200px;
     height: 700px;
+    padding: 40px;
+    margin-top: 250px;
   }
 
   .button {
@@ -85,5 +88,14 @@ body {
 
   .question {
     font-size: 30px;
+    width: 1000px;
+    height: 200px;
+    padding: 15px;
+    margin:5px;
+    margin-left: 80px;
+    position: relative;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 15px;
 
   }
