@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="..\style.css">
+    <script src = "..\src\quiz.js"></script>
     <title>Quiz</title>
 </head>
 <h1 class="quiztitle" id="quiztitle"> Quiz Title</h1>
@@ -19,9 +21,20 @@
         <input class="button" type="button" id="answer2" value="answer2">
         <input class="button" type="button" id="answer3" value="answer3">
         <input class="button" type="button" id="answer4" value="answer4">
-
-
     </div>
+
+    <div>
+        <input class="submit" type="button" id="submit" value="submit">
+    </div>
+
+    <script>
+        document.getElementById("question").innerHTML = catQuiz1.question
+        document.getElementById("answer1").value = catQuiz1.answer1
+        document.getElementById("answer2").value = catQuiz1.answer2
+        document.getElementById("answer3").value = catQuiz1.answer3
+        document.getElementById("answer4").value = catQuiz1.answer4
+
+    </script>
 
 </body>
 
