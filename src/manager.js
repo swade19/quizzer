@@ -5,3 +5,7 @@ go button linked to particular quiz
 
 
 */
+
+showSelectedAnswer = function() {
+    document.getElementById("answer1").style.backgroundColor = "#FF0000";
+}
