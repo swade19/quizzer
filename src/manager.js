@@ -10,6 +10,7 @@ var isAnswerSelected = 0;
 var correctAnswer = catQuiz1.correctAnswer
 var newSelectedButton; // "answer1"
 var answer; //catquiz1.answer1
+var matchButton;
 
 
 showSelectedAnswer = function(selectedButton, questionAnswer) {
@@ -31,16 +32,22 @@ checkAnswer = function(){
     } else{
         findCorrectElement();
         document.getElementById(newSelectedButton).style.backgroundColor = "#FF4500";
+        document.getElementById(matchingButton).style.backgroundColor = "#49E20E";
+        document.getElementById("submit").style.display = "none";
+        document.getElementById("nextPage").style.display = "inherit";
+
+
+
+
 
     }
-   
-
 };
 
 findCorrectElement = function() { 
-    //find the correct question's number
-    var x
-    for ( x=0; x >=catQuiz1.length; x++){
-        console.log(1);
-    }
+    for (const property in catQuiz1) {
+        if (`${catQuiz1[property]}` === correctAnswer){
+            matchingButton= (`${property}`)
+            break;
+        }
+  }
 }
