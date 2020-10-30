@@ -7,21 +7,40 @@ go button linked to particular quiz
 */ 
 
 var isAnswerSelected = 0;
-var correctAnswer = catQuiz1.correctAnswer;
-var answer = "";
+var correctAnswer = catQuiz1.correctAnswer
+var newSelectedButton; // "answer1"
+var answer; //catquiz1.answer1
 
-showSelectedAnswer = function(selection) {
+
+showSelectedAnswer = function(selectedButton, questionAnswer) {
    if (isAnswerSelected === 0){
 
-    answer = selection
-    document.getElementById(answer).style.borderColor = "#FFFF66";
-    document.getElementById(answer).style.borderWidth = "10px";
+    answer= questionAnswer;
+    newSelectedButton = selectedButton
+    console.log(newSelectedButton);
+
+
+    document.getElementById(selectedButton).style.borderColor = "#FFFF66";
+    document.getElementById(selectedButton).style.borderWidth = "10px";
     isAnswerSelected = 1;
 }};
 
 checkAnswer = function(){
-    if (answer === quiz.correctAnswer){
-        console.log("this works!")
-    };
+    if (answer == correctAnswer){
+        document.getElementById(newSelectedButton).style.backgroundColor = "#49E20E	";
+    } else{
+        findCorrectElement();
+        document.getElementById(newSelectedButton).style.backgroundColor = "#FF4500";
+
+    }
+   
 
 };
+
+findCorrectElement = function() { 
+    //find the correct question's number
+    var x
+    for ( x=0; x >=catQuiz1.length; x++){
+        console.log(1);
+    }
+}
