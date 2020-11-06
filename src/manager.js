@@ -29,17 +29,15 @@ showSelectedAnswer = function(selectedButton, questionAnswer) {
 checkAnswer = function(){
     if (answer == correctAnswer){
         document.getElementById(newSelectedButton).style.backgroundColor = "#49E20E	";
+        document.getElementById("submit").style.display = "none";
+        document.getElementById("nextPage").style.display = "inherit"
+
     } else{
         findCorrectElement();
         document.getElementById(newSelectedButton).style.backgroundColor = "#FF4500";
         document.getElementById(matchingButton).style.backgroundColor = "#49E20E";
         document.getElementById("submit").style.display = "none";
         document.getElementById("nextPage").style.display = "inherit";
-
-
-
-
-
     }
 };
 
@@ -50,4 +48,9 @@ findCorrectElement = function() {
             break;
         }
   }
-}
+};
+
+nextQuestion = function(){
+
+
+};
