@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize');
 const express = require('express');
-const finale = require('finale');
+const finale = require('finale-rest');
 
 const app = express()
 // Create data model
@@ -39,7 +39,11 @@ database.sync().then(() => {
   });
 });
 
-finale.initialize({ app, sequelize: database });
+finale.initialize({ 
+  app, 
+  sequelize: database 
+});
+
 finale.resource(
     {
         model: Quizes,
@@ -57,31 +61,31 @@ finale.resource(
     }
 );
 
-// setTimeout(() => {
-//   (async () => {
-//       await Users.create(
-//           {
-//               username: "DumbledoreA",
-//               password: "731e2b8ad7b5ed215fb0281d6e9e37457b466cfd", // onlyonehefeared
-//               permission: "Teacher",
-//               answered: "N/A"
-//           }
-//       )
-//       await Users.create(
-//           {
-//               username: "HagridR",
-//               password: "961cb0e22787334676a45f2106d076b22d62448f", // urawizardharry
-//               permission: "Assistant",
-//               answered: "N/A"
-//           }
-//       )
-//       await Users.create(
-//           {
-//               username: "PotterH",
-//               password: "89cbea19bab7868613c99967a819becab5ded4c4", // boywholived
-//               permission: "Student",
-//               answered: "N/A"
-//           }
-//       )
-//   })();
-// }, 500);
+setTimeout(() => {
+  (async () => {
+      await Users.create(
+          {
+              username: "DumbledoreA",
+              password: "731e2b8ad7b5ed215fb0281d6e9e37457b466cfd", // onlyonehefeared
+              permission: "Teacher",
+              answered: "N/A"
+          }
+      )
+      await Users.create(
+          {
+              username: "HagridR",
+              password: "961cb0e22787334676a45f2106d076b22d62448f", // urawizardharry
+              permission: "Assistant",
+              answered: "N/A"
+          }
+      )
+      await Users.create(
+          {
+              username: "PotterH",
+              password: "89cbea19bab7868613c99967a819becab5ded4c4", // boywholived
+              permission: "Student",
+              answered: "N/A"
+          }
+      )
+  })();
+}, 500);
