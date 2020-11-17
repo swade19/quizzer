@@ -22,15 +22,6 @@ const Users = database.define('users', {
   answered: Sequelize.STRING
 });
 
-// (async()=> {
-// try {
-//   await sequelize.authenticate();
-//   console.log('Connection has been established successfully.');
-// } catch (error) {
-//   console.error('Unable to connect to the database:', error);
-// }
-// })
-
 const port = process.env.SERVER_PORT || 3001;
 
 database.sync().then(() => {
@@ -71,6 +62,7 @@ setTimeout(() => {
               answered: "N/A"
           }
       )
+      console.log("HERE")
       await Users.create(
           {
               username: "HagridR",
@@ -89,3 +81,12 @@ setTimeout(() => {
       )
   })();
 }, 500);
+
+(async()=> {
+  try {
+    await sequelize.authenticate();
+    console.log('Connection has been established successfully.');
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+  }
+  })
